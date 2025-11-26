@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Home - Barkada Blog </title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #FF5722;
+      color: #fff;
+      line-height: 1.6;
+      overflow-x: hidden;
+      position: relative;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .site-container {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    /* HEADER */
+    header {
+      background-color: #FF5722;
+      color: #fff;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+
+    .header-logo-row {
+      text-align: center;
+      padding: 20px 0;
+    }
+
+    .header-logo-row h1 {
+      font-size: 2em;
+      font-weight: 600;
+    }
+
+    nav ul {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+      padding: 12px 0;
+    }
+
+    nav ul li {
+      margin: 0 15px;
+    }
+
+    nav ul li a {
+      padding: 8px 15px;
+      border-radius: 5px;
+      font-weight: 500;
+      font-size: 1.1em;
+      transition: 0.3s ease;
+      color: white;
+    }
+
+    nav ul li a:hover {
+      background-color: #e64a19;
+    }
+
+    /* MAIN */
+    main {
+      flex: 1;
+      padding: 50px 20px;
+      max-width: 1000px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .intro-inner {
+      max-width: 750px;
+      margin: auto;
+      padding: 60px 20px;
+    }
+
+    .intro-inner h2 {
+      font-size: 2.5em;
+      margin-bottom: 25px;
+    }
+
+    .intro-inner p {
+      font-size: 1.2em;
+      margin-bottom: 20px;
+      line-height: 1.8;
+    }
+
+    .intro-inner .btn {
+      display: inline-block;
+      background-color: #fff;
+      color: #FF5722;
+      padding: 12px 35px;
+      border-radius: 50px;
+      font-size: 1.1em;
+      font-weight: 600;
+      transition: 0.3s ease;
+      margin-top: 30px;
+    }
+
+    .intro-inner .btn:hover {
+      background-color: #ffe0d6;
+    }
+
+    /* DASHBOARD */
+    .dashboard {
+      margin-top: 50px;
+      padding: 30px 20px;
+    }
+
+    .dashboard h2 {
+      font-size: 2em;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .dash-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+    }
+
+    .dash-card {
+      background: #ffffff;
+      padding: 25px;
+      border-radius: 15px;
+      color: #FF5722;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+      transition: 0.3s ease;
+      cursor: pointer;
+    }
+
+    .dash-card:hover {
+      transform: translateY(-6px);
+      background: #ffe7dc;
+    }
+
+    .dash-card h3 {
+      font-size: 1.5em;
+      margin-bottom: 10px;
+    }
+
+    /* FOOTER */
+    footer {
+      background-color: #000;
+      color: #fff;
+      text-align: center;
+      padding: 20px 0;
+      margin-top: auto;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="site-container">
+
+    <!-- HEADER -->
+    <header>
+      <div class="header-logo-row">
+        <h1>Barkada Blog</h1>
+      </div>
+
+      <!-- NAVIGATION -->
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="gallery.html">Pictures</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- MAIN -->
+    <main>
+      <div class="intro-inner">
+        <h2>Welcome to our Barkada!</h2>
+        <p>We're a group of friends who love hanging out, making memories, and sharing laughter. Join us on our journey through friendship, fun events, and unforgettable experiences!</p>
+        <a href="about.html" class="btn">Learn More</a>
+      </div>
+
+      <!-- DASHBOARD -->
+      <section class="dashboard">
+        <h2>DASHBOARD</h2>
+
+        <div class="dash-grid">
+
+          <!-- About Us -->
+          <div class="dash-card" onclick="location.href='about.html'">
+            <h3>📚 About the Barkada</h3>
+            <p>Learn more about the group, our history, and what keeps us together.</p>
+          </div>
+
+          <!-- Pictures / Latest Photos -->
+          <div class="dash-card" onclick="location.href='gallery.html'">
+            <h3>📸 Latest Photos</h3>
+            <p>Check out our personal photos and relive the fun memories we've shared together!</p>
+          </div>
+
+          <!-- Events -->
+          <div class="dash-card" onclick="location.href='events.html'">
+            <h3>🎉 Upcoming Events</h3>
+            <p>See what gatherings, trips, or parties are scheduled next.</p>
+          </div>
+
+          <!-- Contact -->
+          <div class="dash-card" onclick="location.href='contact.html'">
+            <h3>☎ Contact Details</h3>
+            <p>Need to reach someone? View our contact list in one tap.</p>
+          </div>
+
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 Barkada Blog | All Rights Reserved</p>
+    </footer>
+
+  </div>
+</body>
+</html>

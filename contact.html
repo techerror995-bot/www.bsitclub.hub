@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Contact - Barkada Blog</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #FF5722;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    a { text-decoration: none; color: inherit; }
+
+    .site-container { display: flex; flex-direction: column; min-height: 100vh; }
+
+    /* Header */
+    header { background-color: #FF5722; color: white; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+    .header-logo { text-align: center; padding: 20px 0; }
+    .header-logo h1 { font-size: 2em; font-weight: 600; }
+
+    nav { background-color: #FF5722; }
+    nav ul {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+      flex-wrap: wrap;
+    }
+    nav ul li { margin: 10px 15px; }
+    nav ul li a {
+      color: white;
+      font-weight: 500;
+      font-size: 1.1em;
+      padding: 8px 15px;
+      border-radius: 5px;
+      transition: 0.3s;
+    }
+    nav ul li a:hover,
+    nav ul li a.active { background-color: #e64a19; text-decoration: underline; }
+
+    /* Main Section */
+    main {
+      flex: 1;
+      padding: 50px 20px;
+      background-color: transparent;
+      text-align: center;
+    }
+
+    main h2 {
+      font-size: 2.5em;
+      color: white;
+      margin-bottom: 40px;
+    }
+
+    .contact-container {
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+      max-width: 600px;
+      margin: 0 auto;
+      background-color: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    }
+
+    .contact-item {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 10px 0;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .contact-item:last-child { border-bottom: none; }
+
+    .contact-item h3 {
+      font-size: 1.2em;
+      color: #FF5722;
+      margin-bottom: 5px;
+    }
+
+    .contact-item p {
+      font-size: 1.1em;
+      color: #333;
+      margin-bottom: 3px;
+    }
+
+    /* Footer */
+    footer { background-color: #000; color: white; text-align: center; padding: 20px 0; }
+
+    @media (max-width: 600px) {
+      .contact-container { padding: 20px; }
+      main h2 { font-size: 2em; }
+    }
+  </style>
+</head>
+<body>
+  <div class="site-container">
+    <!-- Header -->
+    <header>
+      <div class="header-logo">
+        <h1>Barkada Blog</h1>
+      </div>
+      <nav aria-label="Main Navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+      <h2>Contact Us</h2>
+      <div class="contact-container">
+        <!-- James Lloyd Ruiz -->
+        <div class="contact-item">
+          <h3>James Lloyd Ruiz</h3>
+          <p>Email: ruizjameslloyd379@gmail.com</p>
+          <p>Phone: 09817981618</p>
+        </div>
+        <!-- Grant Gabriel Mahilum -->
+        <div class="contact-item">
+          <h3>Grant Gabriel Mahilum</h3>
+          <p>Email: grantgabrielmahilum97@gmail.com</p>
+          <p>Phone: 09464901934</p>
+        </div>
+        <!-- Belio Sinangote -->
+        <div class="contact-item">
+          <h3>Belio Sinangote</h3>
+          <p>Email: beliosinangote4@gmail.com</p>
+          <p>Phone: 09942701877</p>
+        </div>
+        <!-- Jaylou Garcia -->
+        <div class="contact-item">
+          <h3>Jaylou Garcia</h3>
+          <p>Email: garciajaylou02@gmail.com</p>
+          <p>Phone: 09959174074</p>
+        </div>
+        <!-- John Tagalog -->
+        <div class="contact-item">
+          <h3>John Tagalog</h3>
+          <p>Email: johntagalog99@gmail.com</p>
+          <p>Phone: 09753276937</p>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2025 Barkada Blog | All Rights Reserved</p>
+    </footer>
+  </div>
+</body>
+</html>

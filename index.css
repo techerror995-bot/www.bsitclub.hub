@@ -1,0 +1,400 @@
+/* Reset some default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  /* keep the soft background the user liked, add a subtle gradient */
+  background: radial-gradient(circle at 10% 10%, #f7f6fb 0%, #f4f4f9 40%, #ffffff 100%);
+  color: #333;
+  -webkit-font-smoothing:antialiased;
+}
+
+/* Make the page a vertical flex container so footer can stick to bottom
+   when content is short. main will expand to fill available space. */
+html, body { height: 100%; }
+body { display: flex; flex-direction: column; min-height: 100vh; }
+main { flex: 1 0 auto; }
+
+header {
+  background-color: #FF5722;
+  color: white;
+}
+
+.header-logo-row {
+  padding: 14px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.15);
+}
+
+.header-nav-row {
+  padding: 10px 0;
+}
+
+/* layout helpers */
+
+/* Central content container used across header/main/footer */
+.container {
+  width: 92%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 18px; /* inner horizontal breathing room */
+}
+
+/* The site container wraps the whole page and provides subtle visual framing */
+.site-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  align-items: stretch;
+  padding: 0; /* removed top/bottom padding */
+}
+
+header .logo h1 {
+  font-size: 1.8rem;
+  letter-spacing: 0.5px;
+  margin: 0;
+  text-align: center;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  gap: 18px;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-list li a {
+  text-decoration: none;
+  color: white;
+  font-size: 1rem;
+  padding: 10px 16px;
+  border-radius: 6px;
+  background: transparent;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+  font-weight: 500;
+}
+
+.nav-list li a:hover {
+  background: transparent;
+  border-color: transparent;
+  transform: none;
+  box-shadow: none;
+}
+
+.nav-list li a:active {
+  background: transparent;
+  border-color: transparent;
+  font-weight: 700;
+}
+
+/* Intro / hero */
+section.intro {
+  padding: 80px 20px;
+  background: rgba(255,255,255,0.86);
+  text-align: center;
+  border-radius: 12px;
+  margin: 20px auto;
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 12px 36px rgba(20,20,40,0.07);
+  backdrop-filter: blur(5px);
+}
+
+section.intro h2 {
+  color: #FF5722;
+  font-size: 1.9rem;
+}
+
+section.intro p {
+  font-size: 1.05rem;
+  margin-top: 14px;
+  line-height: 1.6;
+  color: #444;
+}
+
+/* About Us section */
+section.about-section {
+  padding: 48px 20px;
+  margin: 28px auto;
+  background: rgba(255,255,255,0.86);
+  border-radius: 12px;
+  box-shadow: 0 12px 36px rgba(20,20,40,0.07);
+  backdrop-filter: blur(5px);
+}
+
+section.about-section h2 {
+  color: #FF5722;
+  font-size: 2rem;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+section.about-section .about-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+section.about-section p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #444;
+  margin-bottom: 18px;
+}
+
+/* Dashboard section */
+section.dashboard {
+  padding: 60px 20px;
+  margin: 40px auto;
+  background: rgba(255,255,255,0.86);
+  border-radius: 12px;
+  box-shadow: 0 12px 36px rgba(20,20,40,0.07);
+  backdrop-filter: blur(5px);
+}
+
+section.dashboard h2 {
+  color: #FF5722;
+  font-size: 2rem;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.dashboard-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(20,20,40,0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.dashboard-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(20,20,40,0.1);
+}
+
+.dashboard-card h3 {
+  color: #333;
+  font-size: 1.1rem;
+  margin: 0 0 20px 0;
+  text-align: center;
+}
+
+.dashboard-card canvas {
+  max-width: 100%;
+  height: auto;
+}
+section.gallery-section {
+  padding: 60px 20px;
+  margin: 0 auto;
+  width: 100%;
+  min-height: 100vh;
+  background: rgba(255,255,255,0.86);
+  border-radius: 0;
+  box-shadow: none;
+  backdrop-filter: blur(5px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+section.gallery-section h2 {
+  color: #FF5722;
+  font-size: 2rem;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.gallery-grid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  max-width: 800px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.gallery-item {
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(20,20,40,0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  max-width: 300px;
+}
+
+.gallery-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(20,20,40,0.1);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+  display: block;
+  padding: 12px;
+  background: #f9f9f9;
+}
+
+.gallery-item p {
+  padding: 14px 12px;
+  font-size: 0.95rem;
+  color: #555;
+  text-align: center;
+  line-height: 1.4;
+}
+
+/* Constrain text width and vertically center inside hero */
+.intro-inner {
+  width: 100%;
+  max-width: 760px;
+  text-align: center;
+  padding: 6px 12px;
+}
+
+.intro-inner h2 { margin-bottom: 10px; }
+.intro-inner p { margin-bottom: 18px; }
+
+.btn {
+  background-color: #FF5722;
+  color: white;
+  padding: 10px 18px;
+  text-decoration: none;
+  font-size: 1rem;
+  border-radius: 6px;
+  margin-top: 18px;
+  display: inline-block;
+}
+
+/* Fixed footer: always visible at bottom of viewport */
+footer {
+  background-color: #FF5722;
+  color: white;
+  text-align: center;
+  padding: 14px 0;
+  margin-top: 30px;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 60;
+}
+
+footer p {
+  font-size: 0.95rem;
+}
+
+/* Add safe bottom padding so main content doesn't sit under the fixed footer */
+.site-container { padding-bottom: 80px; }
+
+/* Toast / small non-blocking notification */
+.toast {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  background: rgba(51,51,51,0.95);
+  color: white;
+  padding: 12px 14px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+  transform: translateY(12px);
+  opacity: 0;
+  transition: transform 220ms ease, opacity 220ms ease;
+}
+
+.toast.show {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.toast .toast-close {
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+/* Ensure the label/message fills available space and aligns properly
+   so the close button stays right-aligned even on narrow/toast-wrapped lines */
+.toast .toast-message {
+  flex: 1 1 auto;
+  min-width: 0; /* allow flex child to shrink properly */
+  word-break: break-word;
+  line-height: 1.2;
+}
+
+@media (max-width: 640px) {
+  .nav-list {
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+  section.intro { padding: 28px 12px; }
+}
+
+@media (min-width: 1100px) {
+  .site-container { padding: 48px 0; }
+  section.intro { padding: 56px 32px; }
+}
+
+/* Agent widget (floating assistant) */
+.agent-widget { position: fixed; right: 22px; bottom: 100px; z-index: 120; display: flex; align-items: flex-end; }
+.agent-button {
+  width: 56px; height: 56px; border-radius: 50%;
+  background: linear-gradient(180deg,#FF7043,#E64A19);
+  border: none; color: white; display: inline-flex; align-items: center; justify-content: center;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.18);
+  cursor: pointer; transition: transform .12s ease, box-shadow .12s ease;
+}
+.agent-button:active { transform: translateY(2px); }
+
+.agent-panel {
+  width: 300px; max-width: calc(100vw - 140px);
+  margin-right: 12px;
+  background: #fff; color: #222; border-radius: 12px; overflow: hidden;
+  box-shadow: 0 20px 40px rgba(22,22,60,0.18);
+  display: flex; flex-direction: column; font-size: 0.95rem;
+}
+.agent-header { padding: 10px 12px; background: linear-gradient(90deg,#FF5722,#FF7043); color: #fff; display:flex; align-items:center; justify-content:space-between; }
+.agent-controls { display:flex; gap:8px; align-items:center; }
+.agent-controls select { padding:6px 8px; border-radius:6px; border:none; font-size:0.9rem; }
+.agent-controls button { background: rgba(255,255,255,0.12); border: none; color: white; padding:6px 8px; border-radius:6px; cursor:pointer; }
+.agent-controls button#agent-clear { background: rgba(255,255,255,0.18); }
+.visually-hidden { position:absolute !important; height:1px; width:1px; overflow:hidden; clip:rect(1px,1px,1px,1px); white-space:nowrap; }
+.agent-body { padding: 12px; height: 180px; overflow-y: auto; background: #fafafa; }
+.agent-body .typing { font-style: italic; color:#777; }
+.agent-body .msg { margin-bottom: 10px; display:block; max-width:86%; }
+.agent-body .msg.user { margin-left: auto; background: #FF7043; color: #fff; padding: 8px 10px; border-radius: 12px 12px 8px 12px; }
+.agent-body .msg.agent { margin-right: auto; background: #eee; color: #222; padding: 8px 10px; border-radius: 12px 12px 12px 8px; }
+.agent-form { display:flex; gap:8px; padding: 10px; border-top: 1px solid #eee; background: #fff; }
+.agent-input { flex:1 1 auto; padding:8px 10px; border-radius:8px; border:1px solid #ddd; font-size:0.95rem; }
+.agent-send { background:#FF5722; color:#fff; border:none; padding:8px 12px; border-radius:8px; cursor:pointer; }
+.agent-panel[hidden] { display: none; }
+
+@media (max-width: 520px) {
+  .agent-panel { width: 88vw; margin-right: 8px; }
+  .agent-widget { right: 12px; bottom: 90px; }
+}
